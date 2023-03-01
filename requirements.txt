@@ -1,4 +1,4 @@
 flask
 gunicorn
 flask_sqlalchemy
-flask_bootsrap
+flask_bootstrap
