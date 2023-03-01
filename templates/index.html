@@ -1,0 +1,47 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Movie Manager</title>
+        <link href="static/CSS/style.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="{{ url_for('home') }}">
+                <img src="/static/IMG/logo.jpg" alt="Movie Logo" width="30" height="24" class="d-inline-block align-text-top">
+                Movie Manager
+            </a>
+            </div>
+        </nav>
+        <ul class="nav justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('add_movie') }}">Add Movie</a>
+              </li>
+        </ul>
+        <h2>A collection of your favorite movies</h2>
+        <div class="row">
+            {% for movie in movies %}
+            <div class="col-sm-3">
+                <div class="card h-100" style="width: 20rem;">
+                    <div class="card-block">
+                        <div class="text-xs-center">
+                            <img src="{{ movie.img_url }}" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ movie.title }}</h5>
+                                <p class="card-text">{{ movie.year }}</p>
+                                <p class="card-text">My Rating: {{ movie.rating }}</p>
+                                <p class="card-text">{{ movie.description }}</p>
+                                <a href="{{ url_for('rate_movie', id=movie.id) }}" class="btn btn-primary">Edit</a>
+                                <a href="{{ url_for('delete_movie', id=movie.id) }}" class="btn btn-danger">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        {% include "footer.html" %}
