@@ -10,8 +10,9 @@ load_dotenv()
 
 app = Flask(__name__)
 app.app_context().push()
+SECRET_KEY = os.urandom(32)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
+app.config['SECRET_KEY'] = SECRET_KEY
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///movies.db"
 Bootstrap(app)
 db = SQLAlchemy(app)
