@@ -39,11 +39,6 @@ db.create_all()
 
 
 @app.route("/")
-def landing():
-    return render_template("landing.html")
-
-
-@app.route("/show", methods=["GET", "POST"])
 def home():
     all_movies = Movie.query.all()
     return render_template("index.html", movies=all_movies)
