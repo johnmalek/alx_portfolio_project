@@ -1,6 +1,6 @@
 # [Movie Manager](https://johnmalek.github.io/movie_manager_landing/) 😃
 
-!(Screenshot.png)
+![Screenshot](https://user-images.githubusercontent.com/29193218/223544378-efe8bf87-6595-4ac7-9068-a780f0c3a7bf.png)
 
 [Movie Manager](https://johnmalek.github.io/movie_manager_landing/) is a website that is essentially a database for movies.
 
