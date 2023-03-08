@@ -13,7 +13,7 @@
 
 ## Inspiration
 I worked on this project because of a personal problem I faced when I worked for a few years. I would be really busy every Monday - Friday from morning to evening. When I got home I hardly had time for entertainment. I would go straight to bed. When I had time off or during the weekends, I would decide to watch my favorite shows. Now this was a problem because I could not remember the name of a good movie whose trailer I had seen online or the name of a good recommendation made for me by friends and family.
-I wanted to create some database that could help me organise these movies. A great UI would also be great. I stumbled upon the [Movie Database](https://www.themoviedb.org/) and thought really hard how I could use it to my adavantage. Luckily, I had knowledge on the [Flask framework](https://flask.palletsprojects.com/en/2.2.x/). I used it to create the restful apis and [SQLALCHEMY](https://www.sqlalchemy.org/) to create the database.
+I wanted to create some database that could help me organize these movies. A great UI would also be great. I stumbled upon the [Movie Database](https://www.themoviedb.org/) and thought really hard how I could use it to my advantage. Luckily, I had knowledge on the [Flask framework](https://flask.palletsprojects.com/en/2.2.x/). I used it to create the restful apis and [SQLALCHEMY](https://www.sqlalchemy.org/) to create the database.
 Now I can just relax and whenever I get a good recommendation for a movie, I can just add here and watch it at a future date when I have the time.
 
 ## Contributing
