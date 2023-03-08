@@ -24,3 +24,11 @@ Now I can just relax and whenever I get a good recommendation for a movie, I can
 * [Personal Video Database](http://www.videodb.info/forum_en/)
 * [GrieeX](http://www.griee.com/)
 * [My Movie Manager](http://mymoviemanager.codeplex.com/)
+
+![Movie Manager Github](https://github.com/johnmalek/alx_portfolio_project)
+
+![Movie Manager Deployed](https://movie-manager.onrender.com/)
+
+![Movie Manager Landing Page](https://johnmalek.github.io/movie_manager_landing/)
+
+![My LinkedIn](https://www.linkedin.com/in/john-malek-8b666b217/)
