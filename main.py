@@ -15,7 +15,7 @@ app.app_context().push()
 SECRET_KEY = os.urandom(32)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = SECRET_KEY
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///movies.db"
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['SQLALCHEMY_DATABASE_URI']
 Bootstrap(app)
 db = SQLAlchemy(app)
 
@@ -43,7 +43,8 @@ db.create_all()
 # /
 @app.route("/")
 def home():
-    # Query the database and return all the movies currently on it
+    """ Query the database and return all the movies currently on it
+    """
     all_movies = Movie.query.all()
     return render_template("index.html", movies=all_movies)
 
@@ -51,6 +52,8 @@ def home():
 # /add
 @app.route("/add", methods=["GET", "POST"])
 def add_movie():
+    """handle the route add that is used to add a new movie
+    """
     form = AddMovieForm()
     if form.validate_on_submit():
         # Get the title of a movie from the form and pass it as part of the parameters for the api call
@@ -64,6 +67,8 @@ def add_movie():
 # /find
 @app.route("/find")
 def find_movie():
+    """handle the route find used to find a new movie
+    """
     # To find a movie, get its Id
     # Pass the id to the movie info url and get more information such as the release date, poster image and overview
     # Store this information in the database
@@ -87,6 +92,8 @@ def find_movie():
 #/edit
 @app.route("/edit", methods=["GET", "POST"])
 def rate_movie():
+    """handle the edit route to edit the rating of a movie
+    """
     # To edit the rating of a movie, get its id
     # Query the database for the specific movie
     # Set its rating and send that back to the database
@@ -103,6 +110,8 @@ def rate_movie():
 # /delete
 @app.route("/delete", methods=["GET", "POST"])
 def delete_movie():
+    """handle the route delete to remove a movie from the collection
+    """
     # To delete a movie, get the specific
     # Query the database for the movie and then delete
     # Commit the changes back to the database
